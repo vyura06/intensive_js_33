@@ -48,16 +48,20 @@ AbortController - это интерфейс, предоставляющий пр
 `-string:
 -- const string = 'Hello';
 -- const string = new String ('Hello');
--- const string = (42).toString();   
+-- const string = (42).toString();
+-- const string = (42 + '');
 -number:
 -- const number = 42;
 -- const number = new Number (42);
 -- const number = parseInt('42', 10);
+-- const number = (+'42');
+-- const number = (43 - '42');   
 -boolean:
 -- const boolean = true;
 -- const boolean = new Boolean (true);
 -- const boolean = 5 > 3;
--- const boolean = true && false;   
+-- const boolean = true && false;
+-- const boolean = (!!1);      
 -null:
 -- const null = null;
 -undefinded:
