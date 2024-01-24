@@ -47,6 +47,41 @@ let counter = { ...{ key: 'value' } };`
 Задание 2 – Скопировать объект counter всеми
 возможными способами;
 
+`Spread-оператор:`
+
+```javascript
+const counter = { key: 'value' };
+const newCounter = { ...counter };
+```
+
+`Object.assign():`
+
+```javascript
+const counter = { key: 'value' };
+const newCounter = Object.assign({}, counter)
+```
+
+`JSON.parse() и JSON.stringify():`
+
+```javascript
+const counter = { key: 'value' };
+const newCounter = JSON.parse(JSON.stringify(counter));
+```
+
+`Object.create() и Object.getOwnPropertyDescriptors():`
+
+```javascript
+const counter = { key: 'value' };
+const newCounter = Object.create(Object.getPrototypeOf(counter), Object.getOwnPropertyDescriptors(counter));
+```
+
+`Расширение объекта (Object.assign() с Object.create()):`
+```javascript
+const counter = { key: 'value' };
+const newCounter = Object.create(Object.getPrototypeOf(counter));
+Object.assign(newCounter, counter);
+```
+
 Задание 3 – Создать функцию makeCounter всеми описанными и возможными способами;
 
 Бонус
