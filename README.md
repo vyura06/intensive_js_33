@@ -1,27 +1,27 @@
 Задание 1 – Создать объект counter всеми возможными способами;
 
 `Литеральная нотация:`
-<pre>
+
 ```javascript
 let counter = { key: 'value' };
 ```
-</pre>
+
 `С помощью конструктора Object:`
-<pre>
+
 ```javascript
 let counter = new Object();```
 counter.key = 'value';
 ```
-</pre>
+
 `С использованием Object.create():`
-<pre>
+
 ```javascript
 let counter = Object.create(null);
 counter.key = 'value';
 ```
-</pre>
+
 `С использованием синтаксиса класса:`
-<pre>
+
 ```javascript
 class newCounter {
   constructor() {
@@ -30,19 +30,19 @@ class newCounter {
 }
 let counter = new newCounter();
 ```
-</pre>
+
 `С использованием Object.assign():`
-<pre>
+
 ```javascript
 let counter = Object.assign({}, { key: 'value' });
 ```
-</pre>
+
 `С использованием spread-оператора:`
-<pre>
+
 ```javascript
 let counter = { ...{ key: 'value' } };`
 ```
-</pre>
+
 
 Задание 2 – Скопировать объект counter всеми
 возможными способами;
