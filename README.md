@@ -1,38 +1,48 @@
 Задание 1 – Создать объект counter всеми возможными способами;
+
 `Литеральная нотация:`
-```javascript
-let objLiteral = { key: 'value' };```
 <pre>
 ```javascript
-let objLiteral = { key: 'value' };
-```</pre>
+let counter = { key: 'value' };
+```
+</pre>
 `С помощью конструктора Object:`
+<pre>
 ```javascript
-let objConstructor = new Object();```
-objConstructor.key = 'value';
-С использованием Object.create():
-javascript
-Copy code
-let objCreate = Object.create(null);
-objCreate.key = 'value';
-С использованием синтаксиса класса:
-javascript
-Copy code
-class MyObject {
+let counter = new Object();```
+counter.key = 'value';
+```
+</pre>
+`С использованием Object.create():`
+<pre>
+```javascript
+let counter = Object.create(null);
+counter.key = 'value';
+```
+</pre>
+`С использованием синтаксиса класса:`
+<pre>
+```javascript
+class newCounter {
   constructor() {
     this.key = 'value';
   }
 }
-
-let objClass = new MyObject();
-С использованием Object.assign():
-javascript
-Copy code
-let objAssign = Object.assign({}, { key: 'value' });
-С использованием spread-оператора:
-javascript
-Copy code
-let objSpread = { ...{ key: 'value' } };`
+let counter = new newCounter();
+```
+</pre>
+`С использованием Object.assign():`
+<pre>
+```javascript
+let counter = Object.assign({}, { key: 'value' });
+```
+</pre>
+`С использованием spread-оператора:`
+<pre>
+```javascript
+let counter = { ...{ key: 'value' } };`
+```
+</pre>
 
 Задание 2 – Скопировать объект counter всеми
 возможными способами;
