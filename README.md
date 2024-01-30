@@ -19,7 +19,7 @@
 2) Прочитать про "Операторы и выражения, циклы в JS"
 3) Создать объект Person несколькими способами, после создать объект Person2, чтобы в нём были доступны методы объекта Person. Добавить метод logInfo чтоб он был доступен всем объектам.
 
-javascript```
+```javascript
 function Person(name, age) {
     this.name = name;
     this.age = age;
@@ -27,22 +27,26 @@ function Person(name, age) {
 Person.prototype.sayHello = function() {
     console.log(`Hello, my name is ${this.name} and I am ${this.age} years old.`);
 };
-const person1 = new Person("John", 30);```
-javascript```
+const person1 = new Person("John", 30);
+```
+
+```javascript
 function Person2(name, age) {
     Person.call(this, name, age);
 }
 Person2.prototype = Object.create(Person.prototype);
-Person2.prototype.constructor = Person2;```
-javascript```
+Person2.prototype.constructor = Person2;
+```
+```javascript
 Person.prototype.logInfo = function() {
     console.log(`Logging info for ${this.name}`);
 };
-const person2 = new Person2("Alice", 25);```
+const person2 = new Person2("Alice", 25);
+```
 
 4) Создать класс PersonThree c get и set для поля name и конструктором, сделать класс наследник от класса Person.
 
-javascript```
+```javascript
 class Person {
     constructor(name) {
         this.name = name;
@@ -60,22 +64,26 @@ class PersonThree extends Person {
         this.age = age;
     }
 }
-const personThree = new PersonThree("John", 30);```
+const personThree = new PersonThree("John", 30);
+```
 
 БОНУС: 
 1) Написать функцию, которая вернет массив с первой парой чисел, сумма которых равна total:
 
 `Задание:`
-javascript```arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+```javascript
+arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 total = 13;
 //result = [4, 9]
 const firstSum = (arr, total) => {
       //Решение
 }
-firstSum(arr,total)```
+firstSum(arr,total)
+```
 
 `Решение:`
-javascript```const firstSum = (arr, total) => {
+```javascript
+const firstSum = (arr, total) => {
     const seen = new Set();
     for (let num of arr) {
         const complement = total - num;
@@ -88,7 +96,8 @@ javascript```const firstSum = (arr, total) => {
 };
 const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 const total = 13;
-console.log(firstSum(arr, total));```
+console.log(firstSum(arr, total));
+```
 
 2) Какая сложность у вашего алгоритма?
 `O(n)`
