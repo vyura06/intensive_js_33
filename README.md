@@ -99,7 +99,7 @@ const numbers = [10, 12, 15, 21];
 printIndexesWithDelay(numbers);
 ```
 
-5) Прочитать про Top Level Await (можно ли использовать await вне функции async)
+4) Прочитать про Top Level Await (можно ли использовать await вне функции async)
 
 БОНУС ЗАДАНИЕ 
 /* Необходимо реализовать функцию fetchUrl, которая будет использоваться следующим образом.
