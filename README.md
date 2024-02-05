@@ -128,7 +128,7 @@ function fetchUrl(url, attempts = 5) {
                         reject(error);
                     } else {
                         console.log(`Attempt ${6 - remainingAttempts} failed. Retrying...`);
-                        setTimeout(() => tryFetch(remainingAttempts - 1), 1000); // Повторить попытку через 1 секунду
+                        setTimeout(() => tryFetch(remainingAttempts - 1), 1000);
                     }
                 });
         };
@@ -139,7 +139,7 @@ function fetchUrl(url, attempts = 5) {
 
 fetchUrl('https://google.com')
     .then(content => {
-        console.log(content); // Обрабатываем содержимое страницы здесь
+        console.log(content);
     })
     .catch(error => {
         console.error('Failed to fetch URL:', error);
